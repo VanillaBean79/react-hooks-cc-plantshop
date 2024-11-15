@@ -41,6 +41,102 @@
       "name": "Fiddle Leaf Fig",
       "image": "./images/fiddle-leaf-fig.jpg",
       "price": 55
+    },
+    {
+      "name": "",
+      "image": "",
+      "price": "",
+      "id": 8
+    },
+    {
+      "name": "",
+      "image": "",
+      "price": "",
+      "id": 9
+    },
+    {
+      "name": "",
+      "image": "",
+      "price": "",
+      "id": 10
+    },
+    {
+      "name": "",
+      "image": "",
+      "price": "",
+      "id": 11
+    },
+    {
+      "name": "",
+      "image": "",
+      "price": "",
+      "id": 12
+    },
+    {
+      "name": "",
+      "image": "",
+      "price": "",
+      "id": 13
+    },
+    {
+      "name": "",
+      "image": "",
+      "price": "",
+      "id": 14
+    },
+    {
+      "name": "",
+      "image": "",
+      "price": "",
+      "id": 15
+    },
+    {
+      "name": "",
+      "image": "",
+      "price": "",
+      "id": 16
+    },
+    {
+      "name": "",
+      "image": "",
+      "price": "",
+      "id": 17
+    },
+    {
+      "name": "Jub Jub",
+      "image": "",
+      "price": "",
+      "id": 18
+    },
+    {
+      "name": "",
+      "image": "",
+      "price": "",
+      "id": 19
+    },
+    {
+      "name": "",
+      "image": "",
+      "price": "",
+      "id": 20
+    },
+    {
+      "name": "Jub Jub",
+      "image": "👩🏼",
+      "price": "5.00",
+      "id": 21
+    },
+    {
+      "name": "",
+      "image": "",
+      "price": "",
+      "id": 22
+    },
+    {
+      "name": "Jub Jub",
+      "image": "👩🏼",
+      "price": "6.00",
+      "id": 23
     }
   ]
 }
