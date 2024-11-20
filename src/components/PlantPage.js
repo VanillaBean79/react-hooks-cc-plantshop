@@ -12,12 +12,12 @@ function PlantPage() {
       .then(data=> setPlants(data))
    })
 
-   const handleAddPlant = (newPlant)=>{
-    setPlants((prevPlants) => [...prevPlants, newPlant])
-   }
+  //  const handleAddPlant = (newPlant)=>{
+  //   setPlants((prevPlants) => [...prevPlants, newPlant])
+  //  }
   return (
     <main>
-      <NewPlantForm onAddPlant={handleAddPlant}/>
+      <NewPlantForm />
       <Search />
       <PlantList plants={plants}/>
     </main>

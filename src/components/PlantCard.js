@@ -1,7 +1,11 @@
 import React from "react";
 
+
 function PlantCard({name, image, price}) {
+
+  
   return (
+    
     <li className="card" data-testid="plant-item">
       <img src={image} alt={"plant name"} />
       <h4>{name}</h4>

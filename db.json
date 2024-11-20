@@ -227,6 +227,36 @@
       "image": "",
       "price": null,
       "id": 58
+    },
+    {
+      "name": "Jam Room",
+      "image": "",
+      "price": null,
+      "id": 59
+    },
+    {
+      "name": "Ruben",
+      "image": "",
+      "price": null,
+      "id": 60
+    },
+    {
+      "name": "Baby",
+      "image": "",
+      "price": null,
+      "id": 61
+    },
+    {
+      "name": "Jub Jub",
+      "image": "👩🏼",
+      "price": null,
+      "id": 62
+    },
+    {
+      "name": "Jub Jub",
+      "image": "👩🏼",
+      "price": null,
+      "id": 63
     }
   ]
 }

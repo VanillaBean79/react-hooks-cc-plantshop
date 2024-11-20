@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function NewPlantForm({ onAddPlant}) {
+function NewPlantForm() {
   const [formData, setFormData] = useState({
     name:"",
     image:"",
@@ -32,8 +32,8 @@ function NewPlantForm({ onAddPlant}) {
   })
     .then((r)=> r.json())
     .then((addedPlant)=>{
-      onAddPlant(addedPlant)
-      setFormData({name:"",image:"",price:""})
+      // onAddPlant(addedPlant)
+      setFormData(formData)
       console.log(addedPlant)
     })
     
