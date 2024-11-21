@@ -10,7 +10,8 @@ function PlantList({plants}) {
         key={plant.id}
         name={plant.name}
         image={plant.image}
-        price={plant.price}/>
+        price={plant.price}
+        />
     ))}</ul>
   );
 }
