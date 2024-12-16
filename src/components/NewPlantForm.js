@@ -36,6 +36,7 @@ function NewPlantForm({ onAddPlant }) {
       setFormData({ name: "", image: "", price: "" })
       console.log(addedPlant)
     })
+
     
   }
   return (

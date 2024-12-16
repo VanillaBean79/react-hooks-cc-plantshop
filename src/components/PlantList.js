@@ -1,25 +1,38 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import PlantCard from "./PlantCard";
 
-function PlantList({plants, onPriceUpdate}) {
-  const [editingPlant, setEditingPlant] = useState(null)
+function PlantList() {
+  const [plants, setPlants] = useState([])
+  
+  useEffect(()=>{
+    fetch("http://localhost:6001/plants")
+      .then((r)=>r.json())
+      .then((data)=>setPlants(data))
+  },[])
 
-    const handlePriceChange = (e, plant)=> {
-      const newPrice = parseFloat(e.target.value)
-      if (!isNaN(newPrice)) {
-        const updatedPlant = { ...plant, price: newPrice}
-        onPriceUpdate(updatedPlant)
-      }
-    }
+  const handlePriceUpdate = (id, updatedPrice) => {
+    fetch(`http://localhost:6001/plants/${id}`,{
+      method:"PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({price: updatedPrice}),
+    })
+      .then((r) => r.json())
+      .then((updatedPlant) => {
+        setPlants((prevPlants) => 
+         prevPlants.map((plant) => 
+        plant.id === updatedPlant.id ? updatedPlant : plant) )
+      })
+  }
   
   return (
     <ul className="cards">{plants.map((plant)=> (
       <PlantCard  
         key={plant.id}
-        name={plant.name}
-        image={plant.image}
-        price={plant.price}
-        onChange={(e) => handlePriceChange(e, plant)}
+        plant={plant}
+        onUpdatePrice={handlePriceUpdate}
+        
         />
     ))}
     </ul>

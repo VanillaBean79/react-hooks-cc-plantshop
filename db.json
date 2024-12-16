@@ -1,43 +1,43 @@
 {
   "plants": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Aloe",
       "image": "./images/aloe.jpg",
       "price": 15.99
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "ZZ Plant",
       "image": "./images/zz-plant.jpg",
       "price": 25.98
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Pilea peperomioides",
       "image": "./images/pilea.jpg",
       "price": 5.99
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "Pothos",
       "image": "./images/pothos.jpg",
       "price": 12.11
     },
     {
-      "id": 5,
+      "id": "5",
       "name": "Jade",
       "image": "./images/jade.jpg",
       "price": 10.37
     },
     {
-      "id": 6,
+      "id": "6",
       "name": "Monstera Deliciosa",
       "image": "./images/monstera.jpg",
       "price": 25.99
     },
     {
-      "id": 7,
+      "id": "7",
       "name": "Fiddle Leaf Fig",
       "image": "./images/fiddle-leaf-fig.jpg",
       "price": 55
@@ -46,85 +46,93 @@
       "name": "Jub Jub",
       "image": "",
       "price": 1.36,
-      "id": 50
+      "id": "50"
     },
     {
       "name": "Jub Jub",
       "image": "👩🏼",
       "price": 5,
-      "id": 51
+      "id": "51"
     },
     {
       "name": "Jub Jub",
       "image": "",
       "price": null,
-      "id": 52
+      "id": "52"
     },
     {
       "name": "foo",
       "image": "",
       "price": null,
-      "id": 53
+      "id": "53"
     },
     {
       "name": "",
       "image": "",
       "price": null,
-      "id": 54
+      "id": "54"
     },
     {
       "name": "Jub Jub",
       "image": "",
       "price": null,
-      "id": 55
+      "id": "55"
     },
     {
       "name": "foo",
       "image": "",
       "price": null,
-      "id": 56
+      "id": "56"
     },
     {
       "name": "Jub Jub",
       "image": "",
       "price": null,
-      "id": 57
+      "id": "57"
     },
     {
       "name": "Aloe",
       "image": "",
       "price": "0.41",
-      "id": 58
+      "id": "58"
     },
     {
       "name": "",
       "image": "",
       "price": "12.99",
-      "id": 59
+      "id": "59"
     },
     {
       "name": "Aloe",
       "image": "",
       "price": "12.99",
-      "id": 60
+      "id": "60"
     },
     {
       "name": "Jub Jub",
       "image": "👩🏼",
       "price": "5.87",
-      "id": 61
+      "id": "61"
     },
     {
       "name": "Jub Jub",
       "image": "👩🏼",
       "price": "7.89",
-      "id": 62
+      "id": "62"
     },
     {
       "name": "Jub Jub",
       "image": "👩🏼",
       "price": "8.88",
-      "id": 63
+      "id": "63"
+    },
+    {
+      "price": 11.11,
+      "id": "25d5"
+    },
+    {
+      "price": 0.14,
+      "id": "27a5"
     }
   ]
 }
