@@ -1,13 +1,12 @@
-import React, { useState} from "react";
+import React, { useState } from "react";
 
+function PlantCard({ plant, onUpdatePrice }) {
+  const [isInStock, setIsInStock] = useState(true);
+  const [newPrice, setNewPrice] = useState(plant.price || "");  // Default to an empty string if `price` is undefined or null
 
-function PlantCard({ plant, onUpdatePrice}) {
-  const [isInStock, setIsInStock] = useState(true)
-  const [newPrice, setNewPrice] = useState(plant.price || "")
-
-  const handleToggle = (e)=>{
-    setIsInStock((prevIsInStock) => !prevIsInStock)
-  }
+  const handleToggle = () => {
+    setIsInStock((prevIsInStock) => !prevIsInStock);
+  };
 
   const formattedPrice = new Intl.NumberFormat("en-US", {
     style: "currency",
@@ -17,20 +16,20 @@ function PlantCard({ plant, onUpdatePrice}) {
   }).format(newPrice);
 
   const handlePriceChange = (e) => {
-    setNewPrice(e.target.value)
-  }
+    // Ensure newPrice is always a string or number, never null
+    setNewPrice(e.target.value || "");  // Fallback to "" if value is null
+  };
 
   const handlePriceSubmit = (e) => {
-    e.preventDefault()
-    
-    const parsedPrice = parseFloat(newPrice)
+    e.preventDefault();
+
+    const parsedPrice = parseFloat(newPrice);
     if (parsedPrice !== plant.price) {
-      onUpdatePrice(plant.id, parsedPrice)
+      onUpdatePrice(plant.id, parsedPrice);
     }
-  }
-  
+  };
+
   return (
-    
     <li className="card" data-testid="plant-item">
       <img src={plant.image} alt={plant.name} />
       <h4>{plant.name}</h4>
@@ -42,11 +41,11 @@ function PlantCard({ plant, onUpdatePrice}) {
         <input
           type="number"
           step="0.01"
-          value={newPrice}
+          value={newPrice}  
           onChange={handlePriceChange}
           placeholder="New Price"
-          />
-          <button type="submit">Update Price</button>
+        />
+        <button type="submit">Update Price</button>
       </form>
     </li>
   );

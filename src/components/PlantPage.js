@@ -11,49 +11,50 @@ function PlantPage() {
    useEffect(()=>{
     fetch("http://localhost:6001/plants")
       .then((r)=> r.json())
-      .then(data=> {
-           setPlants(data)
+      .then(plants=> {
+        console.log("Fetched data:", plants)
+           setPlants(plants)
             console.log("the side effect function just ran")
       })
    },[])
 
    const filteredPlants = plants.filter((plant) => 
-    plant.name.toLowerCase().includes(searchPlant.toLowerCase()))
+    plant.name && plant.name.toLowerCase().includes(searchPlant.toLowerCase()))
    
 
    const handleAddPlant = (newPlant)=>{
     setPlants((prevPlants) => [...prevPlants, newPlant])
    }
 
-   const handlePriceUpdate = (updatedPlant)=> {
+   const handlePriceUpdate = (id, updatedPlant)=> {
     setPlants((prevPlants)=>
       prevPlants.map((plant)=>
     plant.id === updatedPlant.id ? {...plant, price: updatedPlant.price }
    : plant )
 )
-  fetch(`http://localhost:6001/plants/${updatedPlant.id}`,{
+  fetch(`http://localhost:6001/plants/${id}`,{
     method:"PATCH",
     headers: {
-      "Content-Type":"Application/JSON",
+      "Content-Type":"application/json",
     },
     body: JSON.stringify({
-      price:updatedPlant.price,
+      price:updatedPlant
     })
   })
     .then((r)=> r.json())
-    .then((updatedPlantFromServer)=>{
+    .then()
       setPlants((prevPlants)=>
         prevPlants.map((plant)=>
-          plant.id === updatedPlantFromServer.id
-            ? { ...plant, price: updatedPlantFromServer.price}: plant))
-    })
+          plant.id === updatedPlant.id
+            ? { ...plant, price: updatedPlant.price, image: updatedPlant.image }
+            : plant))
+    
  }
   return (
     <main>
       <NewPlantForm onAddPlant={handleAddPlant} />
       <Search onSearch={setSearchPlant}/>
-      <PlantList plants={filteredPlants}
-                 onPriceUpdate={handlePriceUpdate}/>
+      <PlantList  plants={filteredPlants} onPriceUpdate={handlePriceUpdate} />
     </main>
   );
 }
